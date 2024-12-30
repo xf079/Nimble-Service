@@ -14,9 +14,8 @@ import { cacheModule } from '@config/cache.config';
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: [
-        '.env.development.local',
-        '.env.development',
-        '.env.local',
+        `.env.${process.env.NODE_ENV}.local`,
+        `.env.${process.env.NODE_ENV}`,
         '.env',
       ],
     }),
